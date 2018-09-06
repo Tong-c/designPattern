@@ -20,9 +20,16 @@ public abstract class UserInterface {
     }
 
     protected void startBrewing() {
+        if (hws.isReady() && cv.isReady()) {
+            isComplete = false;
+            hws.start();
+            cv.start();
+        }
 
     }
 
-    protected abstract void completeCycle();
+    public abstract void done();
+
+    public abstract void completeCycle();
 
 }
