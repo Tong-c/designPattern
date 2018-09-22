@@ -1,14 +1,20 @@
 package com.tong.headFirst.pizza.factoryMethod;
 
 import com.tong.headFirst.pizza.Pizza;
+import com.tong.headFirst.pizza.abstractFactory.PizzaIngredientFactory;
 
 public class NYStyleCheesePizza extends Pizza {
+    PizzaIngredientFactory ingredientFactory;
 
-    public NYStyleCheesePizza() {
-        name = "NY Style Sauce and Cheese Pizza";
-        dough = "Thin Crust Dough";
-        sauce = "Marinara Sauce";
+    public NYStyleCheesePizza(PizzaIngredientFactory ingredientFactory) {
+        this.ingredientFactory = ingredientFactory;
+    }
 
-        toppings.add("Created Reggiano Cheese");
+    public void prepare() {
+        System.out.println("Preparing " + name);
+        dough = ingredientFactory.createDough();
+        sauce = ingredientFactory.createSauce();
+        cheese = ingredientFactory.createCheese();
+        clams = ingredientFactory.createClam();
     }
 }

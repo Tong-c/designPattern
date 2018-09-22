@@ -1,18 +1,21 @@
 package com.tong.headFirst.pizza.factoryMethod;
 
 import com.tong.headFirst.pizza.Pizza;
+import com.tong.headFirst.pizza.abstractFactory.PizzaIngredientFactory;
 
 public class ChicagoStyleCheesePizza extends Pizza {
-    public ChicagoStyleCheesePizza(){
-        name = " Chicago Style Deep Dish Cheese Pizza";
-        dough = " Extra Thick Crust Dough";
-        sauce = "Plum Tomato Sauce";
+    PizzaIngredientFactory ingredientFactory;
 
-        toppings.add("Shredded Mozzarella Cheese");
+    public ChicagoStyleCheesePizza(PizzaIngredientFactory ingredientFactory) {
+        this.ingredientFactory = ingredientFactory;
     }
 
     @Override
-    public void cut() {
-        System.out.println("Cutting the pizza into square slice");
+    public void prepare() {
+        System.out.println("Preparing " + name);
+        dough = ingredientFactory.createDough();
+        sauce = ingredientFactory.createSauce();
+        cheese = ingredientFactory.createCheese();
+        clams = ingredientFactory.createClam();
     }
 }

@@ -1,4 +1,4 @@
-package com.tong.headFirst.pizza;
+package com.tong.headFirst.pizza.simpleFactory;
 
 import com.tong.headFirst.pizza.abstractFactory.*;
 
@@ -15,16 +15,15 @@ public abstract class Pizza {
     public Clams clams;
     public ArrayList toppings = new ArrayList();
 
-    public abstract void prepare();
 
-    /*public void prepare() {
+    public void prepare() {
         System.out.println("Preparing " + name);
         System.out.println("Tossing dough...");
         System.out.println("Adding toppings: ");
         for (int i = 0; i < toppings.size(); i++) {
             System.out.println("  " + toppings.get(i));
         }
-    }*/
+    }
 
     public void bake() {
         System.out.println("Bake for 25 minutes at 350");
