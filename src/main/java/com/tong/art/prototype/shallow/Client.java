@@ -1,4 +1,4 @@
-package com.tong.art.prototype;
+package com.tong.art.prototype.shallow;
 
 public class Client {
     public static void main(String[] args) {

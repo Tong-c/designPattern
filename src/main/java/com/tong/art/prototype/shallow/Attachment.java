@@ -1,4 +1,4 @@
-package com.tong.art.prototype;
+package com.tong.art.prototype.shallow;
 
 /**
  * @Description: 附件類
