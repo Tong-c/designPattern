@@ -5,6 +5,7 @@ package com.tong.art.composite;
  * @Create: 2018/10/17 0017 上午 9:34
  */
 public class ImageFile extends AbstractFile {
+
     private String name;
 
     public ImageFile(String name) {
