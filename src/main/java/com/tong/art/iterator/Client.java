@@ -15,6 +15,20 @@ public class Client {
         AbstractObjectList list;
         AbstractIterator iterator;
 
+        list = new ProductList(products);
+        iterator = list.createIterator();
 
+        System.out.println("正向遍歷:");
+        while (!iterator.isLast()) {
+            System.out.println(iterator.getNextItem() + ",");
+            iterator.next();
+        }
+        System.out.println();
+        System.out.println("--------------------------");
+        System.out.println("逆向遍歷:");
+        while (!iterator.isFirst()) {
+            System.out.println(iterator.getPreviousItem() + ",");
+            iterator.previous();
+        }
     }
 }
