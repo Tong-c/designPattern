@@ -1,13 +1,1 @@
-# designPattern
-設計模式練習
-``` 
-├─src
-│  ├─main
-│  │  └─java
-│  │      └─com
-│  │          └─tong
-│  │              ├─agile
-│  │              ├─art
-│  │              ├─headFirst
-│  │              └─zen
-```
+设计模式相关，平时看书，看文章，写练习敲的代码。
